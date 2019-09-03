@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "4426a814-5e34-4477-bed8-ddc71c91e7a6",
+		"name": "SD Product API REST",
+		"description": "Paquete de prueba para validar la API RESTFul de simulación de productos de SD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Obtener todos los productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product"
+					]
+				},
+				"description": "Verificamos el método GET para obtener todos los productos existentes"
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener un producto concreto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/api/product/258",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"258"
+					]
+				},
+				"description": "Prueba del API REST para obtener un único producto"
+			},
+			"response": []
+		},
+		{
+			"name": "Creamos un producto nuevo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nombre\": \"silla alta\",\n\t\"descripción\": \"silla de madera para barra\",\n\t\"foto\": \"silla_alta.png\",\n\t\"categoría\": \"mobiliario\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/product",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product"
+					]
+				},
+				"description": "Validación del API REST productos para crear productos (simuladamente)"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizamos un producto",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nombre\": \"silla baja\",\n\t\"descripción\": \"silla de madera para mesa\",\n\t\"foto\": \"silla_baja.png\",\n\t\"nuevo campo\": \"interesante\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/product/254",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"254"
+					]
+				},
+				"description": "Prueba de actualización de productos mediante API REST (simulado)"
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminamos un producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/api/product/576",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"product",
+						"576"
+					]
+				},
+				"description": "Prueba de eliminación de productos mediante el API REST (simulado)"
+			},
+			"response": []
+		}
+	]
+}
